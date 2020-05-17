@@ -1,6 +1,6 @@
 # Global TLD List
 
-List of Glogal TLDs (gTLDs) gathered from [ICANN](http://data.iana.org/TLD/tlds-alpha-by-domain.txt).
+List of Glogal TLDs (gTLDs) gathered from [IANA](http://data.iana.org/TLD/tlds-alpha-by-domain.txt).
 
 ## Installation
 
