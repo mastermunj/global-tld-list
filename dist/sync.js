@@ -56,34 +56,15 @@ let Sync = /** @class */ (() => {
                 .replace(`\n]`, `,\n]`);
             return `export const TLDs = ${data};\n`;
         }
-        // static changes(added: string[], removed: string[]): string {
-        //   let changes = '';
-        //   if (added.length > 0) {
-        //     changes = `Added: ${added.join(', ')}\n`;
-        //   }
-        //   if (removed.length > 0) {
-        //     changes += `Removed: ${removed.join(', ')}\n`;
-        //   }
-        //   return changes;
-        // }
         static writeTLDs(tlds) {
             const data = Sync.exportableTLDs(tlds);
             fs_1.default.writeFileSync(`${Sync.srcPath()}/index.ts`, data);
         }
-        // static writeChanges(added: string[], removed: string[]): void {
-        //   const changes = Sync.changes(added, removed);
-        //   fs.writeFileSync(`${Sync.srcPath()}/.changes`, changes);
-        // }
         static do() {
             return __awaiter(this, void 0, void 0, function* () {
                 const response = yield Sync.getData();
                 const tlds = Sync.process(response.data);
-                // const { added, removed } = Sync.difference(oldTLDs, tlds);
-                // if (added.length <= 0 && removed.length <= 0) {
-                //   return;
-                // }
                 Sync.writeTLDs(tlds);
-                // Sync.writeChanges(added, removed);
             });
         }
     }

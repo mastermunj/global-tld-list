@@ -5,6 +5,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  // prettier-ignore
   plugins: [
     '@typescript-eslint',
     'jest',
@@ -24,5 +25,5 @@ module.exports = {
     node: true,
     commonjs: true,
     browser: false,
-  }
+  },
 };

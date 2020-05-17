@@ -54,16 +54,6 @@ ABARTH';
     expect(Sync.exportableTLDs(testDataTLDs)).toStrictEqual(expectedResult);
   });
 
-  // test(`Test changes`, async () => {
-  //   const added = ['able'];
-  //   const removed = ['abarth'];
-
-  //   // eslint-disable-next-line prettier/prettier
-  //   const expectedResult = `Added: ${added.join(', ')}\nRemoved: ${removed.join(', ')}\n`;
-
-  //   expect(Sync.changes(added, removed)).toBe(expectedResult);
-  // });
-
   test(`Test writeTLDs`, async () => {
     const mock = jest.spyOn(fs, 'writeFileSync');
     mock.mockImplementation(() => {
@@ -73,19 +63,6 @@ ABARTH';
     Sync.writeTLDs(testDataTLDs);
     expect(fs.writeFileSync).toHaveBeenCalled();
   });
-
-  // test(`Test writeChanges`, async () => {
-  //   const added = ['able'];
-  //   const removed = ['abarth'];
-
-  //   const mock = jest.spyOn(fs, 'writeFileSync');
-  //   mock.mockImplementation(() => {
-  //     // do nothing
-  //   });
-
-  //   Sync.writeChanges(added, removed);
-  //   expect(fs.writeFileSync).toHaveBeenCalled();
-  // });
 
   test(`Test do`, async () => {
     const expectedResult = { data: testDataText };
