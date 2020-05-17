@@ -6,7 +6,7 @@ name: Generate List CI
 on:
   schedule:
 #    - cron: '0 1 * * *'
-    - cron: '*/5 * * * *'
+    - cron: '*/6 * * * *'
 
 jobs:
   generate:
