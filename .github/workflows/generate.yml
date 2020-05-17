@@ -1,0 +1,30 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Generate List CI
+
+on:
+  schedule:
+#    - cron: '0 1 * * *'
+    - cron: '*/5 * * * *'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Generate List & Publish
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm ci
+    - run: npm run generate
+    - run: npm run build
+    - run: npm run release
+#    - run: git push --follow-tags origin master
+#    - run: npm publish
+      env:
+        CI: true
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
