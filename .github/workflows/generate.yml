@@ -26,6 +26,7 @@ jobs:
     - run: npm run generate
     - run: npm run build
     - run: npm run release
+    - run: git push --follow-tags
 #    - run: git push --follow-tags origin master
 #    - run: npm publish
       env:
