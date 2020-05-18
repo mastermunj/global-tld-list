@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.11 (2020-05-18)
+
+
+### Features
+
+* change cron to everyday at 1:00 ([a7fc5d8](https://github.com/mastermunj/global-tld-list/commit/a7fc5d85600cbe3f54da450abc3bf78f6dfb2a13))
+
 ### 0.0.10 (2020-05-17)
 
 ### 0.0.9 (2020-05-17)
