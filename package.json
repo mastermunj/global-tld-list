@@ -13,6 +13,10 @@
     "domains",
     "list"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastermunj/global-tld-list.git"
+  },
   "license": "MIT",
   "author": "Munjal Dhamecha",
   "main": "dist/index.js",
