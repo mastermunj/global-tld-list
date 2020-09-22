@@ -17,23 +17,23 @@ ABARTH';
 
   const testDataTLDs = ['aaa', 'aarp', 'भारत', 'abarth'];
 
-  test(`Test srcPath`, () => {
+  test(`srcPath`, () => {
     const srcPath = path.dirname(__dirname) + '/src';
     expect(Sync.srcPath()).toBe(srcPath);
   });
 
-  test(`Test getData`, async () => {
+  test(`getData`, async () => {
     const expectedResult = { data: testDataText };
     const mock = jest.spyOn(axios, 'get');
     mock.mockResolvedValue(expectedResult);
     expect(await Sync.getData()).toBe(expectedResult);
   });
 
-  test(`Test process`, async () => {
+  test(`process`, async () => {
     expect(Sync.process(testDataText)).toStrictEqual(testDataTLDs);
   });
 
-  test(`Test difference`, async () => {
+  test(`difference`, async () => {
     const oldTLDs = [...testDataTLDs];
     const newTLDs = [...testDataTLDs];
     const removed = [newTLDs.pop()];
@@ -43,7 +43,7 @@ ABARTH';
     expect(Sync.difference(oldTLDs, newTLDs)).toStrictEqual({ added, removed });
   });
 
-  test(`Test exportableTLDs`, async () => {
+  test(`exportableTLDs`, async () => {
     const expectedResult = `export const TLDs = [\n\
   'aaa',\n\
   'aarp',\n\
@@ -54,7 +54,7 @@ ABARTH';
     expect(Sync.exportableTLDs(testDataTLDs)).toStrictEqual(expectedResult);
   });
 
-  test(`Test writeTLDs`, async () => {
+  test(`writeTLDs`, async () => {
     const mock = jest.spyOn(fs, 'writeFileSync');
     mock.mockImplementation(() => {
       // do nothing
@@ -64,7 +64,7 @@ ABARTH';
     expect(fs.writeFileSync).toHaveBeenCalled();
   });
 
-  test(`Test do`, async () => {
+  test(`do`, async () => {
     const expectedResult = { data: testDataText };
     const mockAxios = jest.spyOn(axios, 'get');
     mockAxios.mockResolvedValue(expectedResult);
