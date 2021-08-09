@@ -25,6 +25,8 @@ jobs:
     - run: npm ci
     - run: npm run generate
     - run: npm run build
+    - run: git add .
+    - run: "git commit -m 'feat: generate new TLD list'"
     - run: npm run release
     - run: git push --follow-tags
     - run: npm publish
