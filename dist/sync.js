@@ -50,9 +50,7 @@ class Sync {
         };
     }
     static exportableTLDs(tlds) {
-        const data = JSON.stringify(tlds, null, 2)
-            .replace(/"/gi, `'`)
-            .replace(`\n]`, `,\n]`);
+        const data = JSON.stringify(tlds, null, 2).replace(/"/gi, `'`).replace(`\n]`, `,\n]`);
         return `export const TLDs = ${data};\n`;
     }
     static writeTLDs(tlds) {

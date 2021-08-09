@@ -34,10 +34,7 @@ export class Sync {
     return tlds;
   }
 
-  static difference<T>(
-    oldTLDs: T[],
-    newTLDs: T[],
-  ): { added: T[]; removed: T[] } {
+  static difference<T>(oldTLDs: T[], newTLDs: T[]): { added: T[]; removed: T[] } {
     return {
       added: newTLDs.filter((tld) => !oldTLDs.includes(tld)),
       removed: oldTLDs.filter((tld) => !newTLDs.includes(tld)),
@@ -45,9 +42,7 @@ export class Sync {
   }
 
   static exportableTLDs(tlds: string[]): string {
-    const data = JSON.stringify(tlds, null, 2)
-      .replace(/"/gi, `'`)
-      .replace(`\n]`, `,\n]`);
+    const data = JSON.stringify(tlds, null, 2).replace(/"/gi, `'`).replace(`\n]`, `,\n]`);
     return `export const TLDs = ${data};\n`;
   }
 
