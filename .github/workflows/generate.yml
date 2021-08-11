@@ -3,12 +3,9 @@
 
 name: Generate List CI
 
-# on:
-#   schedule:
-#    - cron: '0 1 * * *'
-    # - cron: '*/6 * * * *'
-
-on: [push]
+on:
+  schedule:
+   - cron: '0 1 * * *'
 
 jobs:
   generate:
