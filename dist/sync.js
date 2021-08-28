@@ -37,7 +37,7 @@ class Sync {
                 return;
             }
             if (line.startsWith('xn--')) {
-                line = punycode_1.toUnicode(line);
+                line = (0, punycode_1.toUnicode)(line);
             }
             tlds.push(line.trim());
         });
