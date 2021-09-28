@@ -1,6 +1,6 @@
 {
   "name": "global-tld-list",
-  "version": "0.0.509",
+  "version": "0.0.510",
   "description": "List of Global TLDs",
   "keywords": [
     "tld",
@@ -24,15 +24,15 @@
     "build": "npm run clean && tsc --noEmitOnError",
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf dist coverage",
+    "commit": "git-cz",
     "generate": "node dist/generate.js",
     "lint": "eslint --ext .ts .",
     "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install",
     "release": "standard-version",
     "release:mock": "npm run release -- --dry-run",
     "test": "jest --detectOpenHandles --coverage",
-    "test:watch": "npm run test -- --watch",
-    "prepare": "husky install",
-    "commit": "git-cz"
+    "test:watch": "npm run test -- --watch"
   },
   "config": {
     "commitizen": {
