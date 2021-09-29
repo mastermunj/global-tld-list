@@ -1014,7 +1014,6 @@ exports.TLDs = [
     'ril',
     'rio',
     'rip',
-    'rmit',
     'ro',
     'rocher',
     'rocks',
