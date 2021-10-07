@@ -1152,7 +1152,6 @@ exports.TLDs = [
     'suzuki',
     'sv',
     'swatch',
-    'swiftcover',
     'swiss',
     'sx',
     'sy',
