@@ -979,7 +979,6 @@ exports.TLDs = [
     'qpon',
     'quebec',
     'quest',
-    'qvc',
     'racing',
     'radio',
     'raid',
