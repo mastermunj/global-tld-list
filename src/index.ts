@@ -821,6 +821,7 @@ export const TLDs = [
   'mtr',
   'mu',
   'museum',
+  'music',
   'mutual',
   'mv',
   'mw',

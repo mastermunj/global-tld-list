@@ -824,6 +824,7 @@ exports.TLDs = [
     'mtr',
     'mu',
     'museum',
+    'music',
     'mutual',
     'mv',
     'mw',
