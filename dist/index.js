@@ -720,7 +720,6 @@ exports.TLDs = [
     'lipsy',
     'live',
     'living',
-    'lixil',
     'lk',
     'llc',
     'llp',

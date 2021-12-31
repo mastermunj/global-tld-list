@@ -717,7 +717,6 @@ export const TLDs = [
   'lipsy',
   'live',
   'living',
-  'lixil',
   'lk',
   'llc',
   'llp',
