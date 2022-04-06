@@ -656,6 +656,7 @@ exports.TLDs = [
     'kh',
     'ki',
     'kia',
+    'kids',
     'kim',
     'kinder',
     'kindle',

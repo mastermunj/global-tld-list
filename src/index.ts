@@ -653,6 +653,7 @@ export const TLDs = [
   'kh',
   'ki',
   'kia',
+  'kids',
   'kim',
   'kinder',
   'kindle',
