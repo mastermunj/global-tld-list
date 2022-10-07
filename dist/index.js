@@ -199,7 +199,6 @@ exports.TLDs = [
     'cam',
     'camera',
     'camp',
-    'cancerresearch',
     'canon',
     'capetown',
     'capital',

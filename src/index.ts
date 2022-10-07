@@ -196,7 +196,6 @@ export const TLDs = [
   'cam',
   'camera',
   'camp',
-  'cancerresearch',
   'canon',
   'capetown',
   'capital',
