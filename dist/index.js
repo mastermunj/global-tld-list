@@ -179,7 +179,6 @@ exports.TLDs = [
     'brussels',
     'bs',
     'bt',
-    'bugatti',
     'build',
     'builders',
     'business',
