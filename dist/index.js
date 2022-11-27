@@ -20,7 +20,6 @@ exports.TLDs = [
     'aco',
     'actor',
     'ad',
-    'adac',
     'ads',
     'adult',
     'ae',
