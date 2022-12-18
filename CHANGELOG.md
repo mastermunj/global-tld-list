@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.956 (2022-12-18)
+
+
+### Features
+
+* generate new TLD list ([cfed302](https://github.com/mastermunj/global-tld-list/commit/cfed302a5ae91d00c8685531ffa058195a300186))
+
 ### 0.0.955 (2022-12-17)
 
 ### 0.0.954 (2022-12-16)
