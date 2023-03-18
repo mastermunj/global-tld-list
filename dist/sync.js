@@ -65,5 +65,5 @@ class Sync {
         });
     }
 }
-exports.Sync = Sync;
 Sync.ianaUrl = 'http://data.iana.org/TLD/tlds-alpha-by-domain.txt';
+exports.Sync = Sync;
