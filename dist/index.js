@@ -711,7 +711,6 @@ exports.TLDs = [
     'limited',
     'limo',
     'lincoln',
-    'linde',
     'link',
     'lipsy',
     'live',
