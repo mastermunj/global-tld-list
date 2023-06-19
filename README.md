@@ -13,5 +13,5 @@ npm install global-tld-list --save
 ```js
 import { TLDs } from 'global-tld-list';
 
-const isValid = TLDs.indexOf('com') >= 0;
+const isValid = TLDs.isValid('com');
 ```
