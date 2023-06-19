@@ -4,21 +4,15 @@ import path from 'path';
 
 import { toUnicode } from 'punycode';
 
-// import { TLDs as oldTLDs } from './index';
-
 export class Sync {
   static ianaUrl = 'http://data.iana.org/TLD/tlds-alpha-by-domain.txt';
-
-  static srcPath(): string {
-    return path.dirname(__dirname) + '/src';
-  }
 
   static async getData(): Promise<AxiosResponse<string>> {
     return axios.get<string>(Sync.ianaUrl);
   }
 
-  static process(data: string): string[] {
-    const tlds: string[] = [];
+  static process(data: string): Map<string, number> {
+    const tlds = new Map();
     data
       .toLowerCase()
       .split('\n')
@@ -29,26 +23,9 @@ export class Sync {
         if (line.startsWith('xn--')) {
           line = toUnicode(line);
         }
-        tlds.push(line.trim());
+        tlds.set(line.trim(), 1);
       });
     return tlds;
-  }
-
-  static difference<T>(oldTLDs: T[], newTLDs: T[]): { added: T[]; removed: T[] } {
-    return {
-      added: newTLDs.filter((tld) => !oldTLDs.includes(tld)),
-      removed: oldTLDs.filter((tld) => !newTLDs.includes(tld)),
-    };
-  }
-
-  static exportableTLDs(tlds: string[]): string {
-    const data = JSON.stringify(tlds, null, 2).replace(/"/gi, `'`).replace(`\n]`, `,\n]`);
-    return `export const TLDs = ${data};\n`;
-  }
-
-  static writeTLDs(tlds: string[]): void {
-    const data = Sync.exportableTLDs(tlds);
-    fs.writeFileSync(`${Sync.srcPath()}/index.ts`, data);
   }
 
   static async do(): Promise<void> {
@@ -56,6 +33,8 @@ export class Sync {
 
     const tlds = Sync.process(response.data);
 
-    Sync.writeTLDs(tlds);
+    const dataFile = path.join(path.dirname(__dirname), 'data', 'serialized.txt');
+
+    await fs.promises.writeFile(dataFile, JSON.stringify([...tlds]));
   }
 }
