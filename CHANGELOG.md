@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/mastermunj/global-tld-list/compare/v0.0.1139...v1.0.0) (2023-06-19)
+
+
+### Features
+
+* use map instead of array for performance ([479753a](https://github.com/mastermunj/global-tld-list/commit/479753affe451e3e42189d724f9c04a8f21d4b39))
+
 ### 0.0.1139 (2023-06-19)
 
 ### 0.0.1138 (2023-06-18)
