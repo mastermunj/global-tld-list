@@ -15,3 +15,6 @@ import { TLDs } from 'global-tld-list';
 
 const isValid = TLDs.isValid('com');
 ```
+
+## Breaking Change in v1.0.0
+Since v1.0.0, this package uses map instead of array for runtime performance.
