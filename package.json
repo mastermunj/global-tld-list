@@ -40,8 +40,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.1",
-    "@commitlint/config-conventional": "^19.0.0",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
     "@types/axios": "^0.14.0",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
