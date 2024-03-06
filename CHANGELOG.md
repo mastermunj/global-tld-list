@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.20](https://github.com/mastermunj/global-tld-list/compare/v1.12.19...v1.12.20) (2024-03-06)
+
 ### 1.12.19 (2024-02-28)
 
 ### 1.12.18 (2024-02-27)
