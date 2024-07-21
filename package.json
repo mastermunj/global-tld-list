@@ -28,7 +28,7 @@
     "generate": "node dist/generate.js",
     "lint": "eslint --ext .ts .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "standard-version",
     "release:mock": "npm run release -- --dry-run",
     "test": "jest --detectOpenHandles --coverage",
