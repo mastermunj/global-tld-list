@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.16.8 (2024-07-22)
+
+
+### Bug Fixes
+
+* husky commit msg ([6b3ce12](https://github.com/mastermunj/global-tld-list/commit/6b3ce1230c98a56f055f8420775e64538dc8fbd2))
+
 ### 1.16.7 (2024-07-18)
 
 ### 1.16.6 (2024-07-17)
