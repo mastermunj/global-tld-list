@@ -1,6 +1,6 @@
 import data from '../data/serialized.json' with { type: 'json' };
 
-const tlds = new Map(data as [string, number][]);
+const tlds = new Set(data);
 
 const isValid = (tld: string): boolean => {
   return tlds.has(tld);
