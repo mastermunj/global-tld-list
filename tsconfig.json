@@ -1,34 +1,29 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "NodeNext",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "declaration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "nodenext",
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true
-  },
-  "exclude": [
-    "node_modules",
-    "__tests__"
-  ],
-  "include": [
-    "./src/**/*"
-  ]
+	"compilerOptions": {
+		"target": "es6",
+		"module": "NodeNext",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"declaration": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "nodenext",
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true
+	},
+	"exclude": ["node_modules", "__tests__"],
+	"include": ["./src/**/*"]
 }
