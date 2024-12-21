@@ -118,3 +118,8 @@ dist
 .pnp.*
 
 .DS_Store
+
+# generated
+
+data/*
+!data/.gitkeep

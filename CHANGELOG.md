@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.1.0 (2024-12-21)
+
+
+### Features
+
+* added git user email & name ([bfb747c](https://github.com/mastermunj/global-tld-list/commit/bfb747c8848f8fb46e6675d3b032890462e407ac))
+* change cron schedule to 6 minutes ([ddc4e61](https://github.com/mastermunj/global-tld-list/commit/ddc4e618f1b6121b11fb73515d17338107b41baf))
+* change cron to everyday at 1:00 ([a7fc5d8](https://github.com/mastermunj/global-tld-list/commit/a7fc5d85600cbe3f54da450abc3bf78f6dfb2a13))
+* do git push ([ae91e1c](https://github.com/mastermunj/global-tld-list/commit/ae91e1c7e6cf6e810c132efb9478c4e157a6b547))
+* do npm publish ([54c173a](https://github.com/mastermunj/global-tld-list/commit/54c173a026c7f7f8833b019ce6dd68f0e3b3ad27))
+* generate new TLD list ([acdfebb](https://github.com/mastermunj/global-tld-list/commit/acdfebb07df9654e0e5c61bd5d90447ac454cfe7))
+* generate new TLD list ([fea97c9](https://github.com/mastermunj/global-tld-list/commit/fea97c9858c5202510b1d48d963b7d8f055307c2))
+* generate new TLD list ([8255f12](https://github.com/mastermunj/global-tld-list/commit/8255f1204621614c27794e31348a221d53a04e15))
+* generate new TLD list ([f20325d](https://github.com/mastermunj/global-tld-list/commit/f20325d35925b924fa7da6f409c4dc5682be6919))
+* generate new TLD list ([e0c4227](https://github.com/mastermunj/global-tld-list/commit/e0c42273082f812142c8a2a67304b6f3a697b468))
+* generate new TLD list ([637440a](https://github.com/mastermunj/global-tld-list/commit/637440ab8032dae353aecbb0d0172d6a22822b7f))
+* generate new TLD list ([037d478](https://github.com/mastermunj/global-tld-list/commit/037d4786233bc701f9011eec4a3eae476a63b0c8))
+* generate new TLD list ([0acf140](https://github.com/mastermunj/global-tld-list/commit/0acf140cfb9751dcc8e376c6774b794132897a70))
+* generate new TLD list ([8f008fe](https://github.com/mastermunj/global-tld-list/commit/8f008fe60ad8c019099aa13b843ce24b3602ae4f))
+* generate new TLD list ([f048757](https://github.com/mastermunj/global-tld-list/commit/f0487578b728e1cbb28479f6747229ec3d311eee))
+* generate new TLD list ([1c00e7d](https://github.com/mastermunj/global-tld-list/commit/1c00e7d11921cdf61fd20e7ae5c37e23c9b530a7))
+* generate new TLD list ([226be9d](https://github.com/mastermunj/global-tld-list/commit/226be9d441651b4c8b3779ab6ac91d86d3426107))
+* generate new TLD list ([7aa369c](https://github.com/mastermunj/global-tld-list/commit/7aa369c0bb56e1f4f64ab3300ca13bc65e5e5fe0))
+* generate new TLD list ([8d0ffe5](https://github.com/mastermunj/global-tld-list/commit/8d0ffe52b0a54e0650421fa8f2910d8ab0c16535))
+* generate new TLD list ([cef3c37](https://github.com/mastermunj/global-tld-list/commit/cef3c3754f2097c1120a3ad968c1c04c6a7d7f4f))
+* generate new TLD list ([d1c42dd](https://github.com/mastermunj/global-tld-list/commit/d1c42ddf2e1a4c93429117c167fa8bcf32c42bb9))
+* generate new TLD list ([4dd8bb3](https://github.com/mastermunj/global-tld-list/commit/4dd8bb35477c52c44205582042bd29349bcad09b))
+* generate new TLD list ([a3bb716](https://github.com/mastermunj/global-tld-list/commit/a3bb7161a694bc20aaa84e2079aeb2e547104071))
+* generate new TLD list ([27b445f](https://github.com/mastermunj/global-tld-list/commit/27b445fe732ea55a631cb8fe4d36e6f54201d38d))
+* generate new TLD list ([3ad9b4d](https://github.com/mastermunj/global-tld-list/commit/3ad9b4d2f18172643e4b97d6d8b557fe55dc76ee))
+* generate new TLD list ([78e65cb](https://github.com/mastermunj/global-tld-list/commit/78e65cb75120e1a3bb56036ecd4fdf664d3d43c1))
+* generate new TLD list ([2ebe295](https://github.com/mastermunj/global-tld-list/commit/2ebe295e5de89041f7b476bde7f0742afbceb086))
+* generate new TLD list ([ed9f534](https://github.com/mastermunj/global-tld-list/commit/ed9f534606bbc924a95557e70073c59d69fff137))
+* generate new TLD list ([cfed302](https://github.com/mastermunj/global-tld-list/commit/cfed302a5ae91d00c8685531ffa058195a300186))
+* generate new TLD list ([aa67139](https://github.com/mastermunj/global-tld-list/commit/aa67139aa75c7d31133510f96753853fac0b5d2f))
+* generate new TLD list ([549058d](https://github.com/mastermunj/global-tld-list/commit/549058d29f296d1faeb7d56a44cd2304fb50ad23))
+* generate new TLD list ([a5d39bd](https://github.com/mastermunj/global-tld-list/commit/a5d39bda88e3cec674418368f61622356de89de4))
+* generate new TLD list ([b5b37f9](https://github.com/mastermunj/global-tld-list/commit/b5b37f93c286a13a4f01a83433bf1dd68dc9c7fa))
+* generate new TLD list ([39ddb8d](https://github.com/mastermunj/global-tld-list/commit/39ddb8d67fbd21580570b0c8871ca4534d4785ae))
+* generate new TLD list ([4ef98b4](https://github.com/mastermunj/global-tld-list/commit/4ef98b425124aca32ae6491be64a3aafae1cbcda))
+* generate new TLD list ([405998c](https://github.com/mastermunj/global-tld-list/commit/405998cb6d7e8c70cab4f5b86dd966a18b66f958))
+* generate new TLD list ([ef1e72b](https://github.com/mastermunj/global-tld-list/commit/ef1e72bf8a47fd9e62cb97d3dcc9ba821daca7cd))
+* generate new TLD list ([32e217b](https://github.com/mastermunj/global-tld-list/commit/32e217b002e729646298443b5d7d0e8284992a38))
+* generate new TLD list ([e097889](https://github.com/mastermunj/global-tld-list/commit/e097889cd85043bea5a7340b816249d3ae489841))
+* generate new TLD list ([aaee9ec](https://github.com/mastermunj/global-tld-list/commit/aaee9ec9b4a76e8b676a24c910f0e40e463e0a59))
+* generate new TLD list ([fd2ff8d](https://github.com/mastermunj/global-tld-list/commit/fd2ff8d9b9d6d91572249e642054d3e0414f86b9))
+* generate new TLD list ([22c352b](https://github.com/mastermunj/global-tld-list/commit/22c352bae324dfd57c1fa27a36c9dd93e5a89ec7))
+* generate new TLD list ([029bbbb](https://github.com/mastermunj/global-tld-list/commit/029bbbbac657567961428b598080fe9118895b3f))
+* generate new TLD list ([39c4256](https://github.com/mastermunj/global-tld-list/commit/39c4256258e0a5b2b1ead3d80785ae90a6984e7e))
+* generate new TLD list ([2243780](https://github.com/mastermunj/global-tld-list/commit/2243780fff859e293b1593a8a404d3ed164fd3f0))
+* try actions cron to auto generate list ([714d0ba](https://github.com/mastermunj/global-tld-list/commit/714d0bab8a3097303ffc1f37fca8fc1ff821fd47))
+* use map instead of array for performance ([479753a](https://github.com/mastermunj/global-tld-list/commit/479753affe451e3e42189d724f9c04a8f21d4b39))
+
+
+### Bug Fixes
+
+* correct the husky setup ([87b2113](https://github.com/mastermunj/global-tld-list/commit/87b2113b015b8793ef9976a115ba6baa86434900))
+* do commit only if there are changes ([1aa8229](https://github.com/mastermunj/global-tld-list/commit/1aa822990b853a3a5e6415b1dcd8efd81732c941))
+* fixed lint errors ([08b29ac](https://github.com/mastermunj/global-tld-list/commit/08b29ac2d7631fe7ee1b1a2ac221af4b2fa7a631))
+* generate serialized json and inline it properly ([adcc3de](https://github.com/mastermunj/global-tld-list/commit/adcc3de9e42110db526deadd751340a1c638fc5e))
+* get rid of axiom and use a Set ([0c73775](https://github.com/mastermunj/global-tld-list/commit/0c737751d4f6a07c7f0832deba43644f8b565372))
+* gh action fix ([d8ebbdf](https://github.com/mastermunj/global-tld-list/commit/d8ebbdf82212db5082646b301902bb4a0838ed2c))
+* husky commit msg ([6b3ce12](https://github.com/mastermunj/global-tld-list/commit/6b3ce1230c98a56f055f8420775e64538dc8fbd2))
+
 ### 1.17.85 (2024-12-21)
 
 ### 1.17.84 (2024-12-20)
