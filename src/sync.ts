@@ -1,8 +1,10 @@
-import axios, { AxiosResponse } from 'axios';
-import fs from 'fs';
-import path from 'path';
+import axios, { type AxiosResponse } from 'axios';
+import fs from 'node:fs';
+import path from 'node:path';
 
 import { toUnicode } from 'punycode';
+
+const __dirname = import.meta.dirname;
 
 export class Sync {
   static ianaUrl = 'http://data.iana.org/TLD/tlds-alpha-by-domain.txt';
@@ -33,7 +35,7 @@ export class Sync {
 
     const tlds = Sync.process(response.data);
 
-    const dataFile = path.join(path.dirname(__dirname), 'data', 'serialized.txt');
+    const dataFile = path.join(path.dirname(__dirname), 'data', 'serialized.json');
 
     await fs.promises.writeFile(dataFile, JSON.stringify([...tlds]));
   }
