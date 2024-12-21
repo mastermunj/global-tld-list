@@ -1,6 +1,7 @@
 {
-  "name": "global-tld-list",
-  "version": "1.17.85",
+  "name": "@boredland/global-tld-list",
+  "version": "2.0.3",
+  "private": false,
   "description": "List of Global TLDs",
   "keywords": [
     "tld",
@@ -19,16 +20,35 @@
   },
   "license": "MIT",
   "author": "Munjal Dhamecha",
-  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
-    "build": "npm run clean && tsc --noEmitOnError",
+    "build": "tsup-node src/index.ts --clean --minify --dts --format cjs,esm",
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf dist coverage",
     "commit": "git-cz",
-    "generate": "node dist/generate.js",
+    "generate": "node --experimental-strip-types src/generate.ts",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
+    "prepublishOnly": "npm run generate && npm run build",
     "release": "standard-version",
     "release:mock": "npm run release -- --dry-run",
     "test": "jest --detectOpenHandles --coverage",
@@ -62,6 +82,7 @@
     "sort-package-json": "^2.12.0",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   }
 }
