@@ -8,6 +8,10 @@ const __dirname = import.meta.dirname;
 (async (): Promise<void> => {
 	const res = await fetch(ianaUrl);
 	const text = await res.text();
+	/**
+	 * A Set currently seems to be the fasted version:
+	 * ref.: https://www.measurethat.net/Benchmarks/Show/13803/0/arrayincludes-vs-sethas-vas-maphas#latest_results_block
+	 */
 	const tlds = new Set<string>();
 
 	for (const line of text.toLowerCase().split("\n")) {
