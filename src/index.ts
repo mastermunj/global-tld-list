@@ -1,14 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import data from '../data/serialized.json';
 
 export class TLDs {
-  public static tlds: Map<string, number>;
-
-  static {
-    const dataFile = path.join(path.dirname(__dirname), 'data', 'serialized.txt');
-    const serialized = fs.readFileSync(dataFile, 'utf-8');
-    this.tlds = new Map(JSON.parse(serialized));
-  }
+  public static tlds: Map<string, number> = new Map(data as [string, number][]);
 
   public static isValid(tld: string): boolean {
     return this.tlds.has(tld);

@@ -12,15 +12,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Sync = void 0;
-const axios_1 = __importDefault(require("axios"));
-const fs_1 = __importDefault(require("fs"));
-const path_1 = __importDefault(require("path"));
+exports.List = void 0;
+const node_fs_1 = __importDefault(require("node:fs"));
+const node_path_1 = __importDefault(require("node:path"));
 const punycode_1 = require("punycode");
-class Sync {
+class List {
     static getData() {
         return __awaiter(this, void 0, void 0, function* () {
-            return axios_1.default.get(Sync.ianaUrl);
+            const response = yield fetch(List.ianaUrl);
+            return response.text();
         });
     }
     static process(data) {
@@ -39,14 +39,17 @@ class Sync {
         });
         return tlds;
     }
-    static do() {
+    static generate() {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield Sync.getData();
-            const tlds = Sync.process(response.data);
-            const dataFile = path_1.default.join(path_1.default.dirname(__dirname), 'data', 'serialized.txt');
-            yield fs_1.default.promises.writeFile(dataFile, JSON.stringify([...tlds]));
+            const response = yield List.getData();
+            const tlds = List.process(response);
+            const dataFile = node_path_1.default.join(node_path_1.default.dirname(__dirname), 'data', 'serialized.json');
+            yield node_fs_1.default.promises.writeFile(dataFile, JSON.stringify([...tlds]));
         });
     }
 }
-exports.Sync = Sync;
-Sync.ianaUrl = 'http://data.iana.org/TLD/tlds-alpha-by-domain.txt';
+exports.List = List;
+List.ianaUrl = 'http://data.iana.org/TLD/tlds-alpha-by-domain.txt';
+(() => __awaiter(void 0, void 0, void 0, function* () {
+    yield List.generate();
+}))();

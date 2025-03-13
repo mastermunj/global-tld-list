@@ -20,12 +20,16 @@
   "license": "MIT",
   "author": "Munjal Dhamecha",
   "main": "dist/index.js",
+  "files": [
+    "dist/*",
+    "data/*"
+  ],
   "scripts": {
     "build": "npm run clean && tsc --noEmitOnError",
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf dist coverage",
     "commit": "git-cz",
-    "generate": "node dist/generate.js",
+    "generate": "node dist/list.js",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
