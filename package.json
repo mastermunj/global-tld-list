@@ -35,7 +35,7 @@
     "prepare": "husky",
     "release": "standard-version",
     "release:mock": "npm run release -- --dry-run",
-    "test": "jest --detectOpenHandles --coverage",
+    "test": "vitest",
     "test:watch": "npm run test -- --watch"
   },
   "config": {
@@ -46,24 +46,22 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.1",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
+    "@vitest/coverage-v8": "^3.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-jest": "^29.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^9.1.7",
-    "jest": "^30.0.0",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
     "punycode": "^2.3.1",
     "rimraf": "^6.0.1",
     "sort-package-json": "^3.0.0",
     "standard-version": "^9.5.0",
-    "ts-jest": "^29.2.6",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.2.4"
   }
 }

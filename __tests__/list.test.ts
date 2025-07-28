@@ -1,3 +1,4 @@
+import { describe, expect, test, beforeAll, afterAll, vi } from 'vitest';
 import fs from 'node:fs';
 
 import { List } from '../src/list';
@@ -18,9 +19,9 @@ afterAll(() => {
 });
 
 describe('Sync', () => {
-  jest.mock('fs', () => ({
+  vi.mock('node:fs/promises', () => ({
     promises: {
-      writeFile: jest.fn(),
+      writeFile: vi.fn(),
     },
   }));
 
@@ -39,8 +40,8 @@ describe('Sync', () => {
   });
 
   test(`do`, async () => {
-    const mockFs = jest.spyOn(fs.promises, 'writeFile');
-    mockFs.mockImplementation();
+    const mockFs = vi.spyOn(fs.promises, 'writeFile');
+    mockFs.mockImplementation(() => Promise.resolve());
 
     await List.generate();
     expect(fs.promises.writeFile).toHaveBeenCalled();
