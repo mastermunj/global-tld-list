@@ -4,6 +4,9 @@
 name: Generate List CI
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
   schedule:
     - cron: '0 1 * * *'
 
