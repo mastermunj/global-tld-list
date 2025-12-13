@@ -12,7 +12,7 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
 
 jobs:
   generate:
@@ -20,21 +20,37 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - name: Generate List & Publish
+
         uses: actions/setup-node@v6
         with:
           node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: |
+
+      - name: Configure git identity
+        run: |
           git config user.email "${{ secrets.GIT_USER_EMAIL }}"
           git config user.name "${{ secrets.GIT_USER_NAME }}"
+
       - run: npm ci
       - run: npm run generate
       - run: npm run build
-      - run: git add .
-      - run: "git diff --quiet && git diff --staged --quiet || git commit -m 'feat: generate new TLD list'"
-      - run: npm run release
-      - run: git push --follow-tags
-      - run: npm publish
+
+      - name: Commit if changed
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "feat: generate new TLD list"
+
+      - name: Release
+        run: npm run release
+
+      - name: Push commit + tags
+        run: git push --follow-tags
+
+      - name: Publish to npm
+        run: npm publish
         env:
           CI: true
