@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.24.0 (2026-02-08)
+
+
+### Features
+
+* generate new TLD list ([9481800](https://github.com/mastermunj/global-tld-list/commit/9481800e8fe6b6782cf2f9c40701309de00e7e6a))
+
 ### 1.23.108 (2026-02-07)
 
 ### 1.23.107 (2026-02-06)
