@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
@@ -7,7 +7,8 @@ export default defineConfig({
     cache: false,
     coverage: {
       enabled: true,
-      include: ['src/**'],
+      include: ['src/**', 'scripts/**'],
+      exclude: ['src/data.ts', 'src/details-data.ts'],
     },
   },
 });
