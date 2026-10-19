@@ -1,4 +1,5 @@
 import { BRAND, COUNTRY_CODE, GENERIC, IDN, IDN_COUNTRY, INFRASTRUCTURE, SPECIAL_USE, TERMINATED } from './data.js';
+import { decodePunycode } from './punycode.js';
 // Type-only: the removed list itself ships in `global-tld-list/details`, not the main bundle.
 import type { REMOVED } from './details-data.js';
 
@@ -210,9 +211,18 @@ export function isValidDomain(hostname: string): boolean {
   return (
     ascii.length <= 253 &&
     labels.length >= 2 &&
-    labels.every((label) => LDH_LABEL.test(label)) &&
+    labels.every((label) => LDH_LABEL.test(label) && (!label.startsWith('xn--') || isPunycode(label))) &&
     isTld(labels[labels.length - 1])
   );
+}
+
+/**
+ * `xn--` labels must hold valid punycode that decodes to letters, marks and digits in NFC, as IDNA
+ * requires. Checked here because runtimes disagree on whether `URL` rejects invalid ones.
+ */
+function isPunycode(label: string): boolean {
+  const decoded = decodePunycode(label.slice(4));
+  return decoded !== undefined && /^[\p{L}\p{M}\p{N}-]+$/u.test(decoded) && decoded.normalize('NFC') === decoded;
 }
 
 /** The 1.x API, kept for compatibility. */

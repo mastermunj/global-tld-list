@@ -72,7 +72,7 @@ const gtlds: IcannGtld[] = [
     removalDate: '2020-06-01',
   },
   {
-    gTLD: 'xn--removed-idn',
+    gTLD: 'xn--zz',
     registryOperator: null,
     delegationDate: '2015-01-01',
     specification13: null,
@@ -210,7 +210,7 @@ describe('buildRecords', () => {
   });
 
   test('throws when an IDN cannot be decoded', () => {
-    expect(() => buildRecords(padded(['xn--a']), [], { services: [] })).toThrow(/Could not decode/);
+    expect(() => buildRecords(padded(['xn--b']), [], { services: [] })).toThrow(/Could not decode/);
   });
 });
 
@@ -321,7 +321,7 @@ describe('buildRemoved', () => {
     expect(buildRemoved(records, gtlds, previous, '2026-10-19')).toStrictEqual([
       { ascii: 'old', unicode: 'old', type: 'country-code', removalDate: '2001-01-01' },
       { ascii: 'removed', unicode: 'removed', type: 'generic', removalDate: '2020-06-01' },
-      { ascii: 'xn--removed-idn', unicode: 'xn--removed-idn', type: 'generic', removalDate: '2021-01-01' },
+      { ascii: 'xn--zz', unicode: 'xn--zz', type: 'generic', removalDate: '2021-01-01' },
       { ascii: 'zz', unicode: 'zz', type: 'country-code', removalDate: '2026-10-19' },
     ]);
   });
@@ -344,7 +344,7 @@ describe('buildRemoved', () => {
   test('without a previous run, only ICANN removals are known', () => {
     expect(buildRemoved(records, gtlds, undefined, '2026-10-19').map((r) => r.ascii)).toStrictEqual([
       'removed',
-      'xn--removed-idn',
+      'xn--zz',
     ]);
   });
 });
@@ -425,7 +425,7 @@ describe('generate', () => {
     expect(Object.values(SOURCES).every((url) => url.startsWith('https://'))).toBe(true);
     expect(fetchImpl).toHaveBeenCalledTimes(4);
     expect(result.records.length).toBe(11 + MIN_TLD_COUNT);
-    expect(result.removed.map((r) => r.ascii)).toStrictEqual(['removed', 'xn--removed-idn']);
+    expect(result.removed.map((r) => r.ascii)).toStrictEqual(['removed', 'xn--zz']);
     expect(result.message).toBe('feat(data): add .newgtld\n\n- Added .newgtld (generic)\n');
     expect([...written.keys()]).toStrictEqual([
       path.join('/root', 'src', 'data.ts'),

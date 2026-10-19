@@ -17,7 +17,9 @@
  */
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { domainToUnicode, fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+import { decodePunycode } from '../src/punycode.ts';
 
 import { describeChanges, formatCommitMessage, type Snapshot } from './changes.mts';
 
@@ -220,7 +222,7 @@ export function buildRecords(asciiTlds: string[], gtlds: IcannGtld[], rdap: Rdap
     const type = classify(ascii, gtld !== undefined);
     const record: TldRecord = {
       ascii,
-      unicode: ascii.startsWith('xn--') ? domainToUnicode(ascii) : ascii,
+      unicode: ascii.startsWith('xn--') ? (decodePunycode(ascii.slice(4)) ?? '') : ascii,
       type,
       brand: gtld?.specification13 === true,
     };
@@ -298,7 +300,7 @@ export function buildRemoved(
   for (const gtld of gtlds) {
     if (gtld.removalDate) {
       const ascii = gtld.gTLD.toLowerCase();
-      const unicode = ascii.startsWith('xn--') ? domainToUnicode(ascii) || ascii : ascii;
+      const unicode = ascii.startsWith('xn--') ? (decodePunycode(ascii.slice(4)) ?? ascii) : ascii;
       removed.set(ascii, { ascii, unicode, type: 'generic', removalDate: gtld.removalDate });
     }
   }

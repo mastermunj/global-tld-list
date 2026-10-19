@@ -237,6 +237,7 @@ describe('isValidDomain', () => {
     [`${'a'.repeat(64)}.com`, 'label over 63 characters'],
     [`${'a.'.repeat(126)}com`, 'name over 253 characters'],
     ['xn--zz.com', 'invalid punycode'],
+    ['xn--a.com', 'punycode for a control character'],
   ])('%j is invalid (%s)', (hostname) => {
     expect(isValidDomain(hostname)).toBe(false);
   });
