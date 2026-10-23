@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## 1.28.18 (2026-10-23)
+
+### Bug Fixes
+
+* **data:** update .sc registry details ([0b73fd5](https://github.com/mastermunj/global-tld-list/commit/0b73fd5cdd997bcddb01d93480c863a7b311c217))
 
 ### 1.28.17 (2026-10-19)
 
