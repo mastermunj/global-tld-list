@@ -2091,7 +2091,7 @@ export const DETAILS: Readonly<Record<string, readonly [number, string, number]>
   sb: [-1, '', -1],
   sbi: [360, '2016-04-16', 115],
   sbs: [377, '2015-10-29', 84],
-  sc: [-1, '', -1],
+  sc: [-1, '', 115],
   scb: [419, '2014-07-11', 348],
   schaeffler: [367, '2015-12-24', 349],
   schmidt: [356, '2014-07-03', 350],
