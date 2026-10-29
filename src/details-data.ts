@@ -1613,7 +1613,7 @@ export const DETAILS: Readonly<Record<string, readonly [number, string, number]>
   health: [344, '2016-01-26', 248],
   healthcare: [66, '2014-07-30', 115],
   help: [213, '2014-08-16', 52],
-  helsinki: [97, '2016-01-26', 115],
+  helsinki: [97, '2016-01-26', -1],
   here: [90, '2014-08-29', 6],
   hermes: [188, '2015-01-24', 115],
   hiphop: [122, '2014-05-15', 523],
