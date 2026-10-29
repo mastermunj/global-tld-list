@@ -1,6 +1,6 @@
 {
   "name": "global-tld-list",
-  "version": "1.28.18",
+  "version": "1.28.19",
   "description": "Every IANA top-level domain (TLD), refreshed daily: validate TLDs, get the TLD of a hostname, ccTLD country codes, brand TLDs, IDN/punycode forms, registry operators and RDAP servers. Zero dependencies, typed, ESM + CJS.",
   "keywords": [
     "brand-tld",

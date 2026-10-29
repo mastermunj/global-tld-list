@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 1.28.19 (2026-10-29)
+
+### Bug Fixes
+
+* **data:** update .helsinki registry details ([24a19ef](https://github.com/mastermunj/global-tld-list/commit/24a19efef0e163ed73e87021795f17193713d937))
+
 ## 1.28.18 (2026-10-23)
 
 ### Bug Fixes
