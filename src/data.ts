@@ -432,7 +432,6 @@ export const GENERIC = [
   'health',
   'healthcare',
   'help',
-  'helsinki',
   'here',
   'hermes',
   'hiphop',
