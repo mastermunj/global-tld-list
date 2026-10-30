@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 1.29.0 (2026-10-30)
+
+### Features
+
+* **data:** remove .helsinki ([2ccc4ad](https://github.com/mastermunj/global-tld-list/commit/2ccc4ad2b865061b926c39a6e181649106b6ab46))
+
 ## 1.28.19 (2026-10-29)
 
 ### Bug Fixes
