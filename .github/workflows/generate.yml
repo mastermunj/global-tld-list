@@ -21,6 +21,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # commit-and-tag-version needs the tags and every commit since the last release to pick
+          # the version bump and write the changelog. A shallow clone sees only the day's data
+          # commit, so a feat merged from a PR was released as a patch with no changelog entry.
+          fetch-depth: 0
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v6
         with:

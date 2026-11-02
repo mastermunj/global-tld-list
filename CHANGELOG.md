@@ -16,9 +16,16 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 1.28.18 (2026-10-23)
 
+> **Note:** this release should have been 1.29.0. It is the first to include the changes merged in [#2122](https://github.com/mastermunj/global-tld-list/pull/2122), which the release job missed because it only saw the latest commit. Those changes are listed under Features and the second Bug Fixes entry below.
+
+### Features
+
+* add TLD info, domain validation, special-use names and removed TLDs ([d79a730](https://github.com/mastermunj/global-tld-list/commit/d79a730569c3116dc099fa5ca52581036caa3622))
+
 ### Bug Fixes
 
 * **data:** update .sc registry details ([0b73fd5](https://github.com/mastermunj/global-tld-list/commit/0b73fd5cdd997bcddb01d93480c863a7b311c217))
+* validate punycode the same way on every runtime ([aa0c456](https://github.com/mastermunj/global-tld-list/commit/aa0c456e8198786bccd7d597b1c31d6657fe1833))
 
 ### 1.28.17 (2026-10-19)
 
